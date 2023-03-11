@@ -1,0 +1,39 @@
+name: generator
+
+on:
+  issue_comment:
+    types:
+      - created
+      - deleted
+      - edited
+  issues:
+    types:
+      - closed
+      - deleted
+      - edited
+      - labeled
+      - opened
+      - pinned
+      - reopened
+      - transferred
+      - unlabeled
+      - unpinned
+
+jobs:
+  build: # make sure build/ci work properly
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm install
+      - run: npm run build
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: generate blog post
+        uses: deuscx/issue-blog-action
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          output: "src/content/blog"
+          alias: '{"created_at":"pubDate"}'
