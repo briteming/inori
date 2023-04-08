@@ -11,10 +11,15 @@
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^0.18.2",
+		"@astrojs/react": "^2.1.1",
 		"@astrojs/rss": "^2.3.2",
 		"@astrojs/sitemap": "^1.2.2",
 		"@astrojs/vercel": "^3.2.2",
-		"astro": "^2.2.0"
+		"@types/react": "18.0.21",
+		"@types/react-dom": "18.0.6",
+		"astro": "^2.2.0",
+		"react": "18.0.0",
+		"react-dom": "18.0.0"
 	},
 	"volta": {
 		"node": "16.20.0"
