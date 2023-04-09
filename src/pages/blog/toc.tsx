@@ -82,8 +82,9 @@ const TableOfContents: React.FC<{ headings: MarkdownHeading[] }> = ({
                     .map((heading) => (
                         <li
                             key={heading.slug}
-                            className={`header-link depth-${heading.depth} ${currentID === heading.slug ? 'current-header-link' : ''
-                                }`.trim()}
+                            className={`header-link depth-${heading.depth} ${currentID === heading.slug ? 'text-accent' : ''
+                                } hover:text-accent`.trim()
+                            }
                         >
                             <a href={`#${heading.slug}`} onClick={onLinkClick}>
                                 {unescape(heading.text)}

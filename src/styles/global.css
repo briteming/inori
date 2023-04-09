@@ -118,19 +118,3 @@ blockquote {
 .header-link.depth-4 {
 	padding-inline-start: 3rem;
 }
-
-.current-header-link {
-	background-color: var(--theme-bg-accent);
-	/* Indicates the current heading for forced colors users in older browsers */
-	outline: 1px solid transparent;
-}
-
-@media (forced-colors: active) {
-	.current-header-link {
-		border: 1px solid CanvasText;
-	}
-}
-
-.current-header-link a {
-	color: var(--theme-text);
-}
