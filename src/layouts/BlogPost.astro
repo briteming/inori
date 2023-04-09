@@ -8,7 +8,7 @@ import { SITE_BASE } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, number } = Astro.props;
 ---
 
 <html lang="en">
@@ -53,6 +53,14 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			}
 			<hr />
 			<slot />
+			<script
+				src="https://utteranc.es/client.js"
+				repo="deuscx/inori"
+				issue-number={number}
+				theme="github-light"
+				crossorigin="anonymous"
+				async
+			></script>
 		</main>
 		<Footer />
 	</body>
