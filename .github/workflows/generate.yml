@@ -33,11 +33,12 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: generate blog post
         uses: Deuscx/issue-blog-action@v0.0.4-beta.0
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           output: "src/content/blog"
           alias: '{"created_at":"pubDate"}'
