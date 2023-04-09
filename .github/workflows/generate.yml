@@ -1,6 +1,10 @@
 name: generator
 
 on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 0 * * *'
   issue_comment:
     types:
       - created
@@ -31,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: generate blog post
-        uses: Deuscx/issue-blog-action
+        uses: Deuscx/issue-blog-action@latest
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
