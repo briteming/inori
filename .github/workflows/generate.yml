@@ -35,7 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: generate blog post
-        uses: Deuscx/issue-blog-action@latest
+        uses: Deuscx/issue-blog-action@v0.0.4-beta.0
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
