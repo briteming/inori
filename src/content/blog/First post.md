@@ -1,7 +1,7 @@
 ---
 pubDate: '2023-04-09T08:34:40Z'
-updated_at: '2023-04-09T10:22:37Z'
-comments: 0
+updated_at: '2023-04-09T23:26:48Z'
+comments: 1
 comments_url: 'https://api.github.com/repos/Deuscx/inori/issues/1/comments'
 labels: []
 id: 1659797760
