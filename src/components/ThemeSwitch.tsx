@@ -21,7 +21,9 @@ const ThemeSwitch = () => {
     }, [theme]);
 
     const togglePreference = () => {
-        setTheme(theme === 'dark' ? 'light' : 'dark');
+        const newTheme = theme === 'dark' ? 'light' : 'dark'
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
     }
 
     return (
