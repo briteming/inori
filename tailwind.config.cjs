@@ -14,4 +14,7 @@ module.exports = {
 			collections: getIconCollections(["mdi", "carbon"]),
 		  }),
 	],
+	daisyui:{
+		darkTheme: false
+	}
 }
