@@ -27,7 +27,7 @@ const ThemeSwitch = () => {
     }
 
     return (
-        <div onClick={togglePreference}>
+        <div className='cursor-pointer' onClick={togglePreference}>
             {
                 theme === 'dark' ? <div className='i-carbon-moon'></div> : <div className='i-carbon-sun'></div>
             }
