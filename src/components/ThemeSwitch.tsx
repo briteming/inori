@@ -18,12 +18,26 @@ const ThemeSwitch = () => {
         const root = document.documentElement;
         if (!theme) return
         root.setAttribute('data-theme', theme);
+        setCommentTheme(theme)
     }, [theme]);
 
+    const setCommentTheme = (theme: string) => {
+        if (document.querySelector('.utterances-frame')) {
+            const commentTheme = theme === 'dark' ? 'gruvbox-dark' : 'github-light'
+            const message = {
+                type: 'set-theme',
+                theme: commentTheme
+            };
+            const iframe = document.querySelector('.utterances-frame');
+            iframe?.contentWindow?.postMessage(message, 'https://utteranc.es');
+        }
+    }
     const togglePreference = () => {
         const newTheme = theme === 'dark' ? 'light' : 'dark'
+
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme);
+        setCommentTheme(newTheme)
     }
 
     return (
