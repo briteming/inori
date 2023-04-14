@@ -1,9 +1,16 @@
 ---
 pubDate: '2023-04-09T08:34:40Z'
-updated_at: '2023-04-09T23:26:48Z'
+updated_at: '2023-04-14T22:32:00Z'
 comments: 1
 comments_url: 'https://api.github.com/repos/Deuscx/inori/issues/1/comments'
-labels: []
+labels:
+  - id: 5172590175
+    node_id: LA_kwDOI_vBXc8AAAABNE92Xw
+    url: 'https://api.github.com/repos/Deuscx/inori/labels/documentation'
+    name: documentation
+    color: 0075ca
+    default: true
+    description: Improvements or additions to documentation
 number: 1
 title: First post
 ---
