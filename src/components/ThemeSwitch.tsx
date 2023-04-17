@@ -18,7 +18,7 @@ const ThemeSwitch = () => {
         const root = document.documentElement;
         if (!theme) return
         root.setAttribute('data-theme', theme);
-        setCommentTheme(theme)
+        // setCommentTheme(theme)
     }, [theme]);
 
     const setCommentTheme = (theme: string) => {

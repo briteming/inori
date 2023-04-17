@@ -64,15 +64,27 @@ const {
 			<slot />
 			{
 				showComment && (
-					<script
-						src="https://utteranc.es/client.js"
-						repo="deuscx/inori"
-						issue-number={number}
-						theme="github-light"
-						crossorigin="anonymous"
-						async
+					<div
+						id="utterances"
+						number={number}
 					/>
 				)
+			}
+			{
+				showComment && <script>
+						// let theme =  localStorage.getItem('theme') || 'light';
+						const scriptContainer = document.getElementById('utterances');
+						const script = document.createElement('script');
+						script.src = 'https://utteranc.es/client.js';
+						script.async = true;
+						script.setAttribute('issue-number', scriptContainer.getAttribute('number'));
+						script.setAttribute('repo', 'deuscx/inori');
+						script.setAttribute('theme',  theme === 'dark' ? 'gruvbox-dark' : 'github-light');
+						script.crossOrigin = 'anonymous';
+
+						scriptContainer.innerHTML = '';
+						scriptContainer.appendChild(script);
+					</script>
 			}
 		</main>
 		<Footer />
