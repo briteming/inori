@@ -8,7 +8,16 @@ import { SITE_BASE } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage, number } = Astro.props;
+const {
+	title,
+	description,
+	pubDate,
+	updatedDate,
+	heroImage,
+	number,
+	showComment,
+	showTitle,
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -29,7 +38,7 @@ const { title, description, pubDate, updatedDate, heroImage, number } = Astro.pr
 		</style>
 	</head>
 
-	<body  class="prose">
+	<body class="prose">
 		<Header />
 		<main>
 			{
@@ -42,7 +51,7 @@ const { title, description, pubDate, updatedDate, heroImage, number } = Astro.pr
 					/>
 				)
 			}
-			<h1 class="title">{title}</h1>
+			{ showTitle && <h1 class="title">{title}</h1> }
 			<FormattedDate date={pubDate} />
 			{
 				updatedDate && (
@@ -53,14 +62,18 @@ const { title, description, pubDate, updatedDate, heroImage, number } = Astro.pr
 			}
 			<hr />
 			<slot />
-			<script
-				src="https://utteranc.es/client.js"
-				repo="deuscx/inori"
-				issue-number={number}
-				theme="github-light"
-				crossorigin="anonymous"
-				async
-			></script>
+			{
+				showComment && (
+					<script
+						src="https://utteranc.es/client.js"
+						repo="deuscx/inori"
+						issue-number={number}
+						theme="github-light"
+						crossorigin="anonymous"
+						async
+					/>
+				)
+			}
 		</main>
 		<Footer />
 	</body>

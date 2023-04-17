@@ -19,7 +19,9 @@ const blog = defineCollection({
 		labels: z.array(z.object({
 			id: z.number().optional(),
 			name: z.string().optional()
-		})).optional()
+		})).optional(),
+		showComment: z.boolean().optional().default(true),
+		showTitle: z.boolean().optional().default(true),
 	}),
 });
 
