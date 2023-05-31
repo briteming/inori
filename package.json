@@ -1,38 +1,18 @@
 {
-	"name": "inori",
-	"type": "module",
-	"version": "0.0.1",
+	"private": true,
 	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/mdx": "^0.18.2",
-		"@astrojs/react": "^2.1.1",
-		"@astrojs/rss": "^2.3.2",
-		"@astrojs/sitemap": "^1.2.2",
-		"@astrojs/tailwind": "^3.1.1",
-		"@astrojs/vercel": "^3.2.2",
-		"@egoist/tailwindcss-icons": "^1.0.7",
-		"@iconify-json/carbon": "^1.1.16",
-		"@iconify-json/mdi": "^1.1.50",
-		"@types/react": "18.0.21",
-		"@types/react-dom": "18.0.6",
-		"astro": "^2.2.0",
-		"daisyui": "^2.51.5",
-		"html-escaper": "^3.0.3",
-		"react": "18.0.0",
-		"react-dom": "18.0.0",
-		"sass": "^1.62.0",
-		"tailwindcss": "3.0.24"
-	},
-	"volta": {
-		"node": "16.20.0"
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.9"
+		"@nuxt/content": "^2.6.0",
+		"@nuxt/devtools": "^0.5.5",
+		"@types/node": "^18.15.12",
+		"@unocss/nuxt": "^0.52.5",
+		"@vueuse/nuxt": "^10.1.2",
+		"nuxt": "^3.5.2"
 	}
 }
