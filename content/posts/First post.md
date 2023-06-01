@@ -1,5 +1,5 @@
 ---
-pubDate: '2023-04-09T08:34:40Z'
+created_at: '2023-04-09T08:34:40Z'
 updated_at: '2023-04-14T22:32:00Z'
 comments: 1
 comments_url: 'https://api.github.com/repos/Deuscx/inori/issues/1/comments'
