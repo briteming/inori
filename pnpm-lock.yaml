@@ -13,6 +13,9 @@ devDependencies:
   '@unocss/nuxt':
     specifier: ^0.52.5
     version: registry.npmmirror.com/@unocss/nuxt@0.52.5(postcss@8.4.24)(vite@4.3.9)(webpack@5.84.1)
+  '@unocss/reset':
+    specifier: ^0.52.7
+    version: registry.npmmirror.com/@unocss/reset@0.52.7
   '@vueuse/nuxt':
     specifier: ^10.1.2
     version: registry.npmmirror.com/@vueuse/nuxt@10.1.2(nuxt@3.5.2)(vue@3.3.4)
@@ -1917,6 +1920,12 @@ packages:
     resolution: {integrity: sha512-YrZTTRrf7hnBkKc9j72gelKGqBGdneb4Vo45Oy/dz6aShhp9r64O1UfsrOBVN1Dq0CJy0GYj/BS9yIEk0GUOOA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/reset/-/reset-0.52.5.tgz}
     name: '@unocss/reset'
     version: 0.52.5
+    dev: true
+
+  registry.npmmirror.com/@unocss/reset@0.52.7:
+    resolution: {integrity: sha512-TJW2BaGGQoh0OSDd22Ti8bZ/Ds3YMGT8aBxNPkcyhesH4fCJeWK+rwsAc5g8CS/wp9OdLS8P4Jy9k2Yg/GfrVQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@unocss/reset/-/reset-0.52.7.tgz}
+    name: '@unocss/reset'
+    version: 0.52.7
     dev: true
 
   registry.npmmirror.com/@unocss/scope@0.52.5:

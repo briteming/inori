@@ -40,5 +40,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          output: "content"
-          alias: '{"created_at":"pubDate"}'
+          output: "content/posts"
