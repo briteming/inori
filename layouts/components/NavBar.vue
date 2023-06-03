@@ -9,6 +9,6 @@ import { navLinks } from '@/site.config'
             <span class="hidden md:inline">{{ link.title }}</span>
             <div :class="link.icon" class="md:hidden" />
         </NuxtLink>
-        <DarkMode />
+        <ToggleTheme />
     </nav>
 </template>
