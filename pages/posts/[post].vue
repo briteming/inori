@@ -3,18 +3,18 @@ const route = useRoute()
 const router = useRouter()
 
 const content = ref<HTMLElement | null>(null)
-const { data } = await useAsyncData('page-data', () => {
-    return queryContent('/posts/' + route.params.post).findOne()
-})
 
-onMounted(() => {
-  const navigate = () => {
-    if (location.hash) {
-      document.querySelector(decodeURIComponent(location.hash))
-        ?.scrollIntoView({ behavior: 'smooth' })
-    }
+const navigate = (hash?: string) => {
+  if (location.hash || hash) {
+    document.querySelector(decodeURIComponent(hash || location.hash))
+      ?.scrollIntoView({ behavior: 'smooth' })
   }
+}
 
+function move(id: string) {
+  setTimeout(() => navigate(`#${id}`), 300)
+}
+onMounted(() => {
   const handleAnchors = (
     event: MouseEvent & { target: HTMLElement },
   ) => {
@@ -57,11 +57,26 @@ onMounted(() => {
 </script>
 
 <template>
-    <main class="prose">
-        <ContentRenderer  v-if="data" :value="data">
-            <h1 class="text-4xl font-bold">{{ data.title }}</h1>
-            <ContentRendererMarkdown ref="content" :value="data" />
-        </ContentRenderer>
-    </main>
+  <section class="relative slide-enter-content">
+    <ContentDoc :path="'/posts/' + route.params.post">
+      <template #default="{ doc }">
+        <!-- <DocBack /> -->
+        <ContentRenderer class="prose inori-content" :value="doc" />
+        <DocsToc :toc="doc.body.toc" @move="move" />
+      </template>
+
+      <template #empty>
+        <h1 class="text-center">
+          Document is empty😅
+        </h1>
+      </template>
+
+      <template #not-found>
+        <h1 class="text-center">
+          Not Found Any Document😗
+        </h1>
+      </template>
+    </ContentDoc>
+  </section>
 </template>
 <style ></style>
