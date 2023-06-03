@@ -7,5 +7,7 @@ import './styles/prose.css'
 
 </script>
 <template>
-  <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

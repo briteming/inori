@@ -6,7 +6,7 @@ function resolve(str: string) {
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   // ssr: false,
-  extends: '@nuxt-themes/docus',
+  // extends: '@nuxt-themes/typo',
   app: {
     // baseURL: '/inori/',
     head: {
@@ -26,7 +26,6 @@ export default defineNuxtConfig({
     }
   ],
   content: {
-    documentDriven: true,
     highlight: {
       theme: {
         default: 'vitesse-light',

@@ -49,7 +49,7 @@ export default defineConfig({
         }),
     ],
     shortcuts: [
-        ['head-link', 'text-gray-700 hover:op-100 op-60 transition-opacity select-none cursor-pointer']
+        ['head-link', 'color-inherit hover:op-100 op-60 transition-opacity select-none cursor-pointer']
     ],
     transformers: [
         transformerDirectives(),
