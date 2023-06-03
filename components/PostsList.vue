@@ -2,7 +2,12 @@
 import { formatDate } from '~/utils'
 import type { ParsedContent } from '@/types/content'
 
-const contents = await queryContent('/posts').find() as ParsedContent[]
+defineOptions({
+    name: 'PostsList'
+})
+
+const contents = await queryContent('/posts/').find() as ParsedContent[]
+console.log("🚀 ~ file: PostsList.vue:10 ~ contents:", contents)
 
 const posts = computed(() => contents.map(i => ({
     path: i._path,

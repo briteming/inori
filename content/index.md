@@ -1,3 +1,7 @@
+---
+title: Hello Inori
+---
+
 ## 🧑‍🚀 Hello, Inori
 
 Welcome to the Inori blog starter template. This template serves as a lightweight, minimally-styled
