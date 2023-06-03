@@ -6,6 +6,7 @@ import Social from './components/Social.vue'
 </script>
 
 <template>
+  <NuxtLoadingIndicator/>
   <header class="p-2em">
     <NavBar />
   </header>
