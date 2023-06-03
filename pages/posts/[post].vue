@@ -61,7 +61,7 @@ onMounted(() => {
     <ContentDoc :path="'/posts/' + route.params.post">
       <template #default="{ doc }">
         <!-- <DocBack /> -->
-        <ContentRenderer class="prose inori-content" :value="doc" />
+        <ContentRenderer ref="content" class="prose inori-content" :value="doc" />
         <DocsToc :toc="doc.body.toc" @move="move" />
       </template>
 
