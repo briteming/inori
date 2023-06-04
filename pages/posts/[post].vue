@@ -68,6 +68,7 @@ onMounted(() => {
   <section class="relative slide-enter-content">
     <ContentDoc :path="'/posts/' + route.params.post">
       <template #default="{ doc }">
+        <div class="text-4xl font-bold mb4">{{ doc.title }}</div>
         <!-- <DocBack /> -->
         <ContentRenderer ref="content" class="prose inori-content" :value="doc" />
         <DocsToc :toc="doc.body.toc" @move="move" />
