@@ -1,9 +1,17 @@
 <script setup lang="ts">
+import mediumZoom from 'medium-zoom';
 const route = useRoute()
 const router = useRouter()
 
 const content = ref<HTMLElement | null>(null)
 
+onMounted(()=>{
+  mediumZoom('[data-image-zoom]', {
+    background: 'rgba(0, 0, 0, 0.8)',
+    margin: 24,
+    scrollOffset: 0,
+  })
+})
 const navigate = (hash?: string) => {
   if (location.hash || hash) {
     document.querySelector(decodeURIComponent(hash || location.hash))
