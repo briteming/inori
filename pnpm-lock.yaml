@@ -15,6 +15,9 @@ dependencies:
     version: registry.npmmirror.com/sass@1.62.1
 
 devDependencies:
+  '@iconify-json/simple-icons':
+    specifier: ^1.1.55
+    version: registry.npmmirror.com/@iconify-json/simple-icons@1.1.55
   '@nuxt-themes/docus':
     specifier: ^1.12.0
     version: registry.npmmirror.com/@nuxt-themes/docus@1.12.0(nuxt@3.5.2)(postcss@8.4.24)(rollup@3.23.0)(sass@1.62.1)(vue@3.3.4)
@@ -787,6 +790,14 @@ packages:
     dependencies:
       '@iconify/types': registry.npmmirror.com/@iconify/types@2.0.0
     dev: false
+
+  registry.npmmirror.com/@iconify-json/simple-icons@1.1.55:
+    resolution: {integrity: sha512-bQG9NtG3EnJbNCuwBrTLjoyWX61djNvHCJ7cG+96qzcchFxAP2BVy9qug5YrTsJoOIaOsXqFrYFjITHyI8e4Og==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify-json/simple-icons/-/simple-icons-1.1.55.tgz}
+    name: '@iconify-json/simple-icons'
+    version: 1.1.55
+    dependencies:
+      '@iconify/types': registry.npmmirror.com/@iconify/types@2.0.0
+    dev: true
 
   registry.npmmirror.com/@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify/types/-/types-2.0.0.tgz}
