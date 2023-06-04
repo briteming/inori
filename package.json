@@ -19,6 +19,7 @@
 	},
 	"dependencies": {
 		"@iconify-json/carbon": "^1.1.17",
-		"dayjs": "^1.11.7"
+		"dayjs": "^1.11.7",
+		"sass": "^1.62.1"
 	}
 }
