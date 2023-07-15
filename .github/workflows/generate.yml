@@ -37,7 +37,7 @@ jobs:
       - name: generate blog post
         uses: Deuscx/issue-blog-action@v0.0.5-beta.0
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           output: "content/posts"
