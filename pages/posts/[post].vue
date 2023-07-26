@@ -75,6 +75,7 @@ onMounted(() => {
         <ContentRenderer ref="content" class="prose inori-content" :value="doc" />
         <DocsToc :toc="doc.body.toc" @move="move" />
         <BackTop class="fixed right-10 bottom-10"/>
+        <PostComment :number="doc.number" />
       </template>
 
       <template #empty>
