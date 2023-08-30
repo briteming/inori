@@ -8,20 +8,20 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@iconify-json/simple-icons": "^1.1.55",
-		"@nuxt-themes/docus": "^1.12.0",
-		"@nuxt/content": "^2.6.0",
-		"@nuxt/devtools": "^0.5.5",
-		"@types/node": "^18.15.12",
-		"@unocss/nuxt": "^0.52.5",
-		"@unocss/reset": "^0.52.7",
-		"@vueuse/nuxt": "^10.1.2",
-		"nuxt": "^3.5.2"
+		"@iconify-json/simple-icons": "^1.1.68",
+		"@nuxt-themes/docus": "^1.14.6",
+		"@nuxt/content": "^2.8.1",
+		"@nuxt/devtools": "^0.8.2",
+		"@types/node": "^20.5.7",
+		"@unocss/nuxt": "^0.55.3",
+		"@unocss/reset": "^0.55.3",
+		"@vueuse/nuxt": "^10.4.1",
+		"nuxt": "^3.7.0"
 	},
 	"dependencies": {
-		"@iconify-json/carbon": "^1.1.17",
-		"dayjs": "^1.11.7",
+		"@iconify-json/carbon": "^1.1.20",
+		"dayjs": "^1.11.9",
 		"medium-zoom": "^1.0.8",
-		"sass": "^1.62.1"
+		"sass": "^1.66.1"
 	}
 }
