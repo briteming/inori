@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     // baseURL: '/inori/',
     head: {
       link: [
+        { rel: 'preload', as: 'style', href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css' },
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css' }
       ],
     },
