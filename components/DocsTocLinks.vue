@@ -1,3 +1,4 @@
+<!-- eslint-disable n/prefer-global/process -->
 <script setup lang="ts">
 import type { PropType } from 'vue'
 import type { TocLink } from '@nuxt/content/dist/runtime/types'
@@ -5,8 +6,8 @@ import type { TocLink } from '@nuxt/content/dist/runtime/types'
 defineProps({
   links: {
     type: Array as PropType<TocLink[]>,
-    default: () => []
-  }
+    default: () => [],
+  },
 })
 
 const emit = defineEmits(['move'])
@@ -21,12 +22,12 @@ if (process.client) {
       ...document.querySelectorAll('.inori-content h1'),
       ...document.querySelectorAll('.inori-content h2'),
       ...document.querySelectorAll('.inori-content h3'),
-      ...document.querySelectorAll('.inori-content h4')
+      ...document.querySelectorAll('.inori-content h4'),
     ])
   }, 300)
 }
 
-function scrollToHeading (id: string) {
+function scrollToHeading(id: string) {
   router.push(`#${id}`)
   emit('move', id)
 }

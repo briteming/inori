@@ -1,27 +1,45 @@
 {
-	"private": true,
-	"scripts": {
-		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare"
-	},
-	"devDependencies": {
-		"@iconify-json/simple-icons": "^1.1.68",
-		"@nuxt-themes/docus": "^1.14.6",
-		"@nuxt/content": "^2.8.1",
-		"@nuxt/devtools": "^0.8.2",
-		"@types/node": "^20.5.7",
-		"@unocss/nuxt": "^0.55.3",
-		"@unocss/reset": "^0.55.3",
-		"@vueuse/nuxt": "^10.4.1",
-		"nuxt": "^3.7.0"
-	},
-	"dependencies": {
-		"@iconify-json/carbon": "^1.1.20",
-		"dayjs": "^1.11.9",
-		"medium-zoom": "^1.0.8",
-		"sass": "^1.66.1"
-	}
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@iconify-json/carbon": "^1.1.20",
+    "dayjs": "^1.11.9",
+    "medium-zoom": "^1.0.8",
+    "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.41.0",
+    "@iconify-json/simple-icons": "^1.1.68",
+    "@nuxt-themes/docus": "^1.14.6",
+    "@nuxt/content": "^2.8.1",
+    "@nuxt/devtools": "^0.8.2",
+    "@types/node": "^20.5.7",
+    "@unocss/eslint-config": "^0.55.3",
+    "@unocss/nuxt": "^0.55.3",
+    "@unocss/reset": "^0.55.3",
+    "@vueuse/nuxt": "^10.4.1",
+    "eslint": "^8.48.0",
+    "lint-staged": "^14.0.1",
+    "nuxt": "^3.7.0",
+    "simple-git-hooks": "^2.9.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@antfu",
+      "@unocss"
+    ]
+  }
 }

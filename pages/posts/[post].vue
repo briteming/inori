@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import mediumZoom from 'medium-zoom';
+import mediumZoom from 'medium-zoom'
+
 const route = useRoute()
 const router = useRouter()
 
 const content = ref<HTMLElement | null>(null)
 
-onMounted(()=>{
+onMounted(() => {
   mediumZoom('[data-image-zoom]', {
     background: 'rgba(0, 0, 0, 0.8)',
     margin: 24,
     scrollOffset: 0,
   })
 })
-const navigate = (hash?: string) => {
+function navigate(hash?: string) {
   if (location.hash || hash) {
     document.querySelector(decodeURIComponent(hash || location.hash))
       ?.scrollIntoView({ behavior: 'smooth' })
@@ -65,16 +66,18 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="relative slide-enter-content">
-    <ContentDoc :path="'/posts/' + route.params.post">
+  <section class="slide-enter-content relative">
+    <ContentDoc :path="`/posts/${route.params.post}`">
       <template #default="{ doc }">
         <div class="mb4">
-          <div class="text-4xl font-bold">{{ doc.title }}</div>
+          <div class="text-4xl font-bold">
+            {{ doc.title }}
+          </div>
           <div>{{ formatReadTime(readTime(doc.description)) }}</div>
         </div>
-        <ContentRenderer ref="content" class="prose inori-content" :value="doc" />
+        <ContentRenderer ref="content" class="inori-content prose" :value="doc" />
         <DocsToc :toc="doc.body.toc" @move="move" />
-        <BackTop class="fixed right-10 bottom-10"/>
+        <BackTop class="fixed bottom-10 right-10" />
         <PostComment :number="doc.number" />
       </template>
 
@@ -92,4 +95,5 @@ onMounted(() => {
     </ContentDoc>
   </section>
 </template>
-<style ></style>
+
+<style></style>

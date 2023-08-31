@@ -1,58 +1,58 @@
 // from @nuxt/content
 export interface ParsedContentInternalMeta {
-    /**
+  /**
      * Content id
      */
-    _id: string
-    /**
+  _id: string
+  /**
      * Content source
      */
-    _source?: string
-    /**
+  _source?: string
+  /**
      * Content path, this path is source agnostic and it the content my live in any source
      */
-    _path?: string
-    /**
+  _path?: string
+  /**
      * Content title
      */
-    title?: string
-    /**
+  title?: string
+  /**
      * Content draft status
      */
-    _draft?: boolean
-    /**
+  _draft?: boolean
+  /**
      * Content partial status
      */
-    _partial?: boolean
-    /**
+  _partial?: boolean
+  /**
      * Content locale
      */
-    _locale?: string
-    /**
+  _locale?: string
+  /**
      * File type of the content, i.e `markdown`
      */
-    _type?: string
-    /**
+  _type?: string
+  /**
      * Path to the file relative to the content directory
      */
-    _file?: string
-    /**
+  _file?: string
+  /**
      * Extension of the file
      */
-    _extension?: string
+  _extension?: string
 }
 
 export interface ParsedContentMeta extends ParsedContentInternalMeta {
-    [key: string]: any
+  [key: string]: any
 }
 
 export interface ParsedContent extends ParsedContentMeta {
-    /**
+  /**
      * Excerpt
      */
-    excerpt?: any
-    /**
+  excerpt?: any
+  /**
      * Content body
      */
-    body: any
+  body: any
 }

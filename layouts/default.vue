@@ -6,15 +6,15 @@ import Social from './components/Social.vue'
 </script>
 
 <template>
-  <NuxtLoadingIndicator/>
+  <NuxtLoadingIndicator />
   <header class="p-2em">
     <NavBar />
   </header>
   <aside>
     <Social />
   </aside>
-  <main class="flex-1 px-7 py-10 w-100%">
-    <div class="max-w-70ch m-auto">
+  <main class="w-100% flex-1 px-7 py-10">
+    <div class="m-auto max-w-70ch">
       <slot />
       <Footer />
     </div>

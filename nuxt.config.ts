@@ -12,32 +12,32 @@ export default defineNuxtConfig({
     head: {
       link: [
         { rel: 'preload', as: 'style', href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css' }
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css' },
       ],
     },
   },
   components: [
     {
       global: true,
-      path: resolve('./components')
+      path: resolve('./components'),
     },
     {
       global: true,
-      path: resolve('./components/content')
-    }
+      path: resolve('./components/content'),
+    },
   ],
   content: {
     highlight: {
       theme: {
         default: 'vitesse-light',
         dark: 'vitesse-dark',
-      }
-    }
+      },
+    },
   },
   modules: [
     '@nuxt/content',
     '@nuxt/devtools',
     '@unocss/nuxt',
-    '@vueuse/nuxt'
-  ]
+    '@vueuse/nuxt',
+  ],
 })
