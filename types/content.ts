@@ -10,44 +10,44 @@ export interface Label {
 
 export interface ParsedContentInternalMeta {
   /**
-     * Content id
-     */
+   * Content id
+   */
   _id: string
   /**
-     * Content source
-     */
+   * Content source
+   */
   _source?: string
   /**
-     * Content path, this path is source agnostic and it the content my live in any source
-     */
+   * Content path, this path is source agnostic and it the content my live in any source
+   */
   _path?: string
   /**
-     * Content title
-     */
+   * Content title
+   */
   title?: string
   /**
-     * Content draft status
-     */
+   * Content draft status
+   */
   _draft?: boolean
   /**
-     * Content partial status
-     */
+   * Content partial status
+   */
   _partial?: boolean
   /**
-     * Content locale
-     */
+   * Content locale
+   */
   _locale?: string
   /**
-     * File type of the content, i.e `markdown`
-     */
+   * File type of the content, i.e `markdown`
+   */
   _type?: string
   /**
-     * Path to the file relative to the content directory
-     */
+   * Path to the file relative to the content directory
+   */
   _file?: string
   /**
-     * Extension of the file
-     */
+   * Extension of the file
+   */
   _extension?: string
 }
 
@@ -57,12 +57,12 @@ export interface ParsedContentMeta extends ParsedContentInternalMeta {
 
 export interface ParsedContent extends ParsedContentMeta {
   /**
-     * Excerpt
-     */
+   * Excerpt
+   */
   excerpt?: any
   /**
-     * Content body
-     */
+   * Content body
+   */
   body: any
 
   labels?: Label[]
