@@ -41,7 +41,7 @@ const posts = computed(() => contents.map(i => ({
         </div>
         <div class="flex gap-4 ws-nowrap text-sm op50">
           <span>
-            {{ formatDate(post.date, true) }}
+            {{ formatDate(post.date) }}
           </span>
           <div>{{ formatReadTime(readTime(post.description)) }}</div>
         </div>
